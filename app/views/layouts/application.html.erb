@@ -8,8 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  
+  <header>
+  <ul>
+    <li><%= link_to "トップページ", root_path %></li>
+    <li><%= link_to "ツイートする", tweets_path %></li>
+  </ul>
+  </header>
 
 <%= yield %>
+
+<footer>
+    <p>ツイッターぽいアプリ</p>
+</footer>
 
 </body>
 </html>
