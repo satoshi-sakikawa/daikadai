@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    
+    <h1><font color="blue"><strong>Tweet 一覧</strong></font></h1>
+    
+      <%= link_to "ツイートしちゃう", new_tweet_path, class: 'btn btn-primary btn-lg' %>
+      <% @tweet.each do |tweet| %>
+      <p>ツイート:<%= tweet.content %></p>
+        <%= link_to "ツイートを編集する", edit_tweet_path(tweet.id), class: 'btn btn-default btn-sm btn-success'  %>
+        <%= link_to 'ツイートを削除する',tweet_path(tweet.id), method: :delete , data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger'%>
+      <% end %>
+   </div>
+ </div>
